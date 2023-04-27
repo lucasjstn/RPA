@@ -1,0 +1,253 @@
+<process name="Observer" version="1.0" bpversion="7.1.2.3518" narrative="Metodo treino para tentar criar um observer." byrefcollection="true" type="object" runmode="Exclusive" preferredid="29a8ae24-301b-428c-9a02-6a7ae0ff651c">
+  <appdef>
+    <element name="Application Root">
+      <id>5346ab58-e2f6-40d5-9257-f284fe46bbbb</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="9bc03240-b343-4ec6-89dc-691ea39fa4cc" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="35fa692c-9973-4c8b-a42f-cafde8ad2af3" type="Normal" published="False">
+    <name>Action 1</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>21</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="ef1e02e1-c80c-4467-b4da-07d831a7b043" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>a6c26845-b183-4825-89a0-f768a55d3d26</onsuccess>
+  </stage>
+  <stage stageid="a6c26845-b183-4825-89a0-f768a55d3d26" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="72850e8a-507f-4917-8347-4be097226551" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="123999fe-487b-4ca7-9d0f-c3a450d2ad95" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>9bc03240-b343-4ec6-89dc-691ea39fa4cc</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="a816fbe4-2d17-4839-9886-4217bcfccb0e" name="Start" type="Start">
+    <subsheetid>9bc03240-b343-4ec6-89dc-691ea39fa4cc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>92c0145b-a149-4d0a-86f0-cb7b73f82be7</onsuccess>
+  </stage>
+  <stage stageid="92c0145b-a149-4d0a-86f0-cb7b73f82be7" name="End" type="End">
+    <subsheetid>9bc03240-b343-4ec6-89dc-691ea39fa4cc</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="126d8f6b-a547-4a14-b256-ffb981b7eb7d" name="Action 1" type="SubSheetInfo">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="0a58b1cb-1dc4-4819-ad86-2685ec1460aa" name="" type="Note">
+    <subsheetid>9bc03240-b343-4ec6-89dc-691ea39fa4cc</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="dde0b688-c510-4a78-83fd-6f467d84416d" name="" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="ce25320b-8e46-4091-a51b-a103b432689a" name="Start" type="Start">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="45" y="-90" />
+    <onsuccess>82e71fc6-2b86-41b3-a9aa-61e3248fbb95</onsuccess>
+  </stage>
+  <stage stageid="2e0f18da-da31-494f-9137-5a5360d799e2" name="End" type="End">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="45" y="180" />
+  </stage>
+  <stage stageid="d5d7e8c0-68dc-4a4c-9d92-90e6a4f63f21" name="Utility - File Management::Get Files" type="Action">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="0" />
+    <inputs>
+      <input type="text" name="Folder" friendlyname="Folder" narrative="The folder in which to look for files" expr="&quot;C:\Users\010130853\Documents\Viagem&quot;" />
+      <input type="text" name="Patterns CSV" friendlyname="Patterns CSV" narrative="The comma seperated list of wildcard patterns" expr="&quot;*.xlsx&quot;" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" narrative="True if successful" stage="Success" />
+      <output type="text" name="Message" friendlyname="Message" narrative="A message if unsuccessful" stage="Message" />
+      <output type="collection" name="Files" friendlyname="Files" narrative="The collection of files found" stage="Files" />
+    </outputs>
+    <onsuccess>b699c924-5988-4c98-92a5-9de8130de4e9</onsuccess>
+    <resource object="Utility - File Management" action="Get Files" />
+  </stage>
+  <stage stageid="e2fa2786-32ff-4ec4-9fbc-6238f807b5a3" name="Success" type="Data">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-150" y="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="381e0da4-18f4-40ea-8866-9d0b1f907e50" name="Message" type="Data">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-150" y="75" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="55ea8b27-f4f8-4be8-ba87-746f1aa631cd" name="Files" type="Collection">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-150" y="-15" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dc84429f-1a0c-4fe8-9518-41a2b6bcc70a" name="Decision1" type="Decision">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="45" y="90" />
+    <decision expression="[Count]&gt;0" />
+    <ontrue>2e0f18da-da31-494f-9137-5a5360d799e2</ontrue>
+    <onfalse>b5fc3ac0-7fc6-4e64-8059-21e53f4f4da5</onfalse>
+  </stage>
+  <stage stageid="b5fc3ac0-7fc6-4e64-8059-21e53f4f4da5" name="Anchor1" type="Anchor">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="90" w="10" h="10" />
+    <onsuccess>ee1b967b-eba1-43d7-b773-4211a9734713</onsuccess>
+  </stage>
+  <stage stageid="155d2408-e66a-49d6-a553-42e47e1cfb89" name="Anchor2" type="Anchor">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-45" w="10" h="10" />
+    <onsuccess>82e71fc6-2b86-41b3-a9aa-61e3248fbb95</onsuccess>
+  </stage>
+  <stage stageid="82e71fc6-2b86-41b3-a9aa-61e3248fbb95" name="Anchor3" type="Anchor">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="-45" w="10" h="10" />
+    <onsuccess>d5d7e8c0-68dc-4a4c-9d92-90e6a4f63f21</onsuccess>
+  </stage>
+  <stage stageid="b699c924-5988-4c98-92a5-9de8130de4e9" name="Collections::Count Rows" type="Action">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="45" y="45" />
+    <inputs>
+      <input type="text" name="Collection Name" friendlyname="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Files&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" friendlyname="Count" narrative="The number of rows counted in the collection" stage="Count" />
+    </outputs>
+    <onsuccess>dc84429f-1a0c-4fe8-9518-41a2b6bcc70a</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="fe9ce478-f56e-4805-bd64-9d8113395e38" name="Count" type="Data">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-150" y="120" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e75756b8-1f5f-496d-be0c-c94d5a8bc59f" name="Calc1" type="Calculation">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-345" y="60" />
+    <calculation expression="" stage="" />
+  </stage>
+  <stage stageid="3bf69f78-d63a-4c74-a149-ab4421d069a0" name="Action1" type="Action">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-345" y="15" />
+    <resource object="" action="" />
+  </stage>
+  <stage stageid="b4cafa4f-cf06-474d-a116-51a060d0e20d" name="Utility - Date and Time Manipulation::DateAdd" type="Action">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-165" y="180" />
+    <inputs>
+      <input type="datetime" name="DateTime" friendlyname="DateTime" narrative="The date to which to add Hours Minutes or Seconds" expr="[Data Teste]" />
+      <input type="number" name="Hours" friendlyname="Hours" narrative="OPTIONAL: The number of hours to add" expr="0" />
+      <input type="number" name="Minutes" friendlyname="Minutes" narrative="OPTIONAL: The number of minutes to add" expr="1" />
+      <input type="number" name="Seconds" friendlyname="Seconds" narrative="OPTIONAL: The number of seconds to add" expr="0" />
+    </inputs>
+    <outputs>
+      <output type="datetime" name="Result" friendlyname="Result" narrative="The date with the number of hours minutes or seconds added to it" stage="Result" />
+    </outputs>
+    <resource object="Utility - Date and Time Manipulation" action="DateAdd" />
+  </stage>
+  <stage stageid="25fa3565-30af-413d-b3e5-c90c6f5586c8" name="Data Teste" type="Data">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-285" y="75" />
+    <datatype>datetime</datatype>
+    <initialvalue>2023-04-26 15:47:41Z</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1fddab58-3389-448c-b5db-9711ccb6dbce" name="Result" type="Data">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <display x="-285" y="120" />
+    <datatype>datetime</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b98e6d07-7ec0-410a-9a11-dfac11ad4004" name="Time Out1" type="WaitEnd">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit />
+    <display x="255" y="30" w="30" h="30" />
+    <onsuccess>155d2408-e66a-49d6-a553-42e47e1cfb89</onsuccess>
+    <groupid>e92cc2a5-1d71-491a-8fa7-da385bd0ed5e</groupid>
+  </stage>
+  <stage stageid="ee1b967b-eba1-43d7-b773-4211a9734713" name="Wait1" type="WaitStart">
+    <subsheetid>35fa692c-9973-4c8b-a42f-cafde8ad2af3</subsheetid>
+    <loginhibit />
+    <display x="150" y="30" w="30" h="30" />
+    <groupid>e92cc2a5-1d71-491a-8fa7-da385bd0ed5e</groupid>
+    <choices />
+    <timeout>60</timeout>
+  </stage>
+</process>
